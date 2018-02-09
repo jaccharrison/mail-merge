@@ -16,9 +16,9 @@ on whatever Spreadsheet you point it to.
 3. Copy the names (which should be in the same order as the emails) into the
    second column of the Spreadsheet.
    
- 5. Open the 'email script.gs' file on the left side of this window. 
+5. Open the 'email script.gs' file on the left side of this window. 
  
- 4. Get the Document ID of the spreadsheet you copied the names into. Put that into
+4. Get the Document ID of the spreadsheet you copied the names into. Put that into
      the code where it says 'const spreadsheetId = '. This is on line 7.
      To get the 'id' of google docs or sheets, you open the document, and look
      at the URL in the top bar of your browser. Most of the URL will read like
@@ -26,21 +26,21 @@ on whatever Spreadsheet you point it to.
      bullshit. That bullshit is the document ID. If you need help recognizing it, look
      at the ids that are already in the code from last time somebody used it.
      
-  5. Go to the Google Doc titled 'Email Message', which hopefully nobody has 
+5. Go to the Google Doc titled 'Email Message', which hopefully nobody has 
      moved, and type your message. If they did move it, just create a new doc,
      and copy the document ID into the 'const docId = ' field below the 
      spreadsheet constant. When you type the message, you have one 'tag' to place: ${name}. 
      Type exactly ${name} wherever you want the person's name to be in the email.
      Note that you must use HTML formatting to add extra effects to your message. In particular,
-     any time you want to go to a new line, you should type <br>.
-     
-  6. **Set the subject of your email.** That's the 'const subject = ' field on
+     any time you want to go to a new line, you should type `<br>`
+     
+6. **Set the subject of your email.** That's the 'const subject = ' field on
      line 11. **Don't forget this.** The BMS chairman I was overseeing did. All of his emails sent with the subject line "TEST". I wonder why we didn't receive as many applications this year.
-     
-  7. **Run the script.** See the button between the 'bug' and the light bulb?
+    
+7. **Run the script.** See the button between the 'bug' and the light bulb?
      Make sure that says 'mailMerge'. If it doesn't, click the button, and select mailMerge.
      
-  8. **Press play.** When the script is done, check you spreadsheet and make sure
+8. **Press play.** When the script is done, check you spreadsheet and make sure
      all of the rows say 'Email Sent' after them. If the script stopped at
      a certain point (Google only lets you send so many emails per SMTP 
      greeting, so it's entirely possible that it did if you're emailing the 400 freshmen that received a scholarship from the university), just run the script
